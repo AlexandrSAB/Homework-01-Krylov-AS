@@ -44,7 +44,7 @@ public class Main {
         while (number >= 0) {
             if(number % 3 == 0) {
                 System.out.println(number);
-            };
+            }
             --number;
         }
 
