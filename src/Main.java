@@ -1,41 +1,53 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-/*        System.out.println("Hello world!");
+
+        task1_creating_variables();
+
+        task2_greeting("Alex");
+
+        task3_is_positive_1(500);
+
+        task4_is_positive_2(-500);
+
+        task5_output_sequence_of_numbers();
+
+    }
+
+    private static void task1_creating_variables() {
         byte a = 100;
-        System.out.println(a);
-        short b, c ,d;
-        b = 400;
-        c = 500;
-        d = 600;
-        System.out.println(a += 200);
-        System.out.println();
-        System.out.println(c);
-        a --;
-        System.out.println(a);
-        char symbol = '$';
-        System.out.println(symbol + 1);*/
-
-        calculateSecondsFromUser();
-
+        short b = 30000;
+        int c = 100500;
+        long d = -100500100;
+        float e = 3.1141592654F;
+        double f = -3.141592654;
+        char g = '$';
+        boolean h = true;
     }
 
-
-
-    private static void calculateSecondsFromUser() {
-        System.out.println("Enter amount of seconds: ");
-        Scanner sc = new Scanner(System.in);
-        int secondsFromUser = sc.nextInt();
-        int days = (secondsFromUser / 60 / 60 / 24);
-        int hours = (secondsFromUser / 60 / 60) % 24;
-        int minutes = (secondsFromUser / 60) % 60;
-        int seconds = (secondsFromUser % minutes);
-        System.out.println("There are " + days + " days");
-        System.out.println("There are " + hours + " hours");
-        System.out.println("There are " + minutes + " minutes");
-        System.out.println("There are " + seconds + " seconds");
+    private static void task2_greeting(String name) {
+        System.out.println("Hello, " + name);
     }
 
+    private static boolean task3_is_positive_1(int number1) {
+        if (number1 < 0) {return false;}
+        else {return true;}
+    }
+
+    private static void task4_is_positive_2(int number2) {
+        if (number2 < 0) {System.out.println("The number is negative");}
+        else {System.out.println("The number is positive");}
+    }
+
+    private static void task5_output_sequence_of_numbers() {
+        short number = 1000;
+        while (number >= 0) {
+            if(number % 3 == 0) {
+                System.out.println(number);
+            };
+            --number;
+        }
+
+    }
 
 }
